@@ -1,0 +1,31 @@
+{
+  "name": "bespin/datavalidation-ssn",
+  "description": "Library for SSN verification and other SSN helpers",
+  "minimum-stability": "stable",
+  "license": "MPL-2.0",
+  "authors": [
+    {
+      "name": "Lars Hennig",
+      "email": "lars@bespin-studios.com"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "8.1"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Bespin\\DataValidation\\": "src"
+    }
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.12.4"
+  },
+  "require": {
+    "php": ">=8.1",
+    "bespin/datavalidation-shared": "*",
+    "ext-ctype": "*",
+    "ext-mbstring": "*"
+  }
+}
