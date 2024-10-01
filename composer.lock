@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c40ca00c4c815d6e4603c0caf6ac554",
+    "content-hash": "997f62620fd5e26f07c8ed2ebbf208f9",
     "packages": [
         {
             "name": "bespin/datavalidation-shared",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bespin-studios/datavalidation-shared.git",
-                "reference": "eb84ce7c2724a650e38bf6b090e5cf4f5503aaf3"
+                "reference": "fb1f93c10edce25a8c83cf5f322046ee4252da04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bespin-studios/datavalidation-shared/zipball/eb84ce7c2724a650e38bf6b090e5cf4f5503aaf3",
-                "reference": "eb84ce7c2724a650e38bf6b090e5cf4f5503aaf3",
+                "url": "https://api.github.com/repos/bespin-studios/datavalidation-shared/zipball/fb1f93c10edce25a8c83cf5f322046ee4252da04",
+                "reference": "fb1f93c10edce25a8c83cf5f322046ee4252da04",
                 "shasum": ""
             },
             "require-dev": {
@@ -42,9 +42,9 @@
             "description": "Shared components for bespin/datavalidation packages",
             "support": {
                 "issues": "https://github.com/bespin-studios/datavalidation-shared/issues",
-                "source": "https://github.com/bespin-studios/datavalidation-shared/tree/v1.1.0"
+                "source": "https://github.com/bespin-studios/datavalidation-shared/tree/v1.2.0"
             },
-            "time": "2024-09-25T13:10:30+00:00"
+            "time": "2024-10-01T12:30:47+00:00"
         }
     ],
     "packages-dev": [
@@ -113,7 +113,9 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.1"
+        "php": ">=8.1",
+        "ext-ctype": "*",
+        "ext-mbstring": "*"
     },
     "platform-dev": [],
     "platform-overrides": {
