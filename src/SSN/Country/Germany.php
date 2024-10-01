@@ -85,7 +85,6 @@ class Germany implements ValidatorInterface
         return false;
     }
 
-    // Validierung der Prüfziffer
     private static function validateChecksum(string $ssn): bool
     {
         $elements = mb_str_split(substr($ssn, 0, 8).self::convertLetter(substr($ssn, 8, 1)).substr($ssn, 9));
