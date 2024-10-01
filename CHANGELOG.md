@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/bespin-studios/datavalidation-ssn/compare/v1.0.2...v1.0.3) (2024-10-01)
+
+
+### Bug Fixes
+
+* type issues ([9d93f77](https://github.com/bespin-studios/datavalidation-ssn/commit/9d93f77eec486986043aa9a4c9d33799398b9128))
+
 ## [1.0.2](https://github.com/bespin-studios/datavalidation-ssn/compare/v1.0.1...v1.0.2) (2024-10-01)
 
 
