@@ -8,6 +8,7 @@ use DateTime;
 
 class Germany implements ValidatorInterface
 {
+    /** @var array<int>  */
     private array $humanFormat = [2, 8, 9, 11];
 
     public function verify(string $ssn, bool $isAlreadyMachineFormat = false): bool
@@ -35,17 +36,27 @@ class Germany implements ValidatorInterface
     {
         if (!$isAlreadyMachineFormat) {
             // remove all non-alphanumeric characters
-            $ssn = preg_replace('/[^A-Z0-9]/', '', strtoupper($ssn));
+            $result = preg_replace('/[^A-Z0-9]/', '', strtoupper($ssn));
+            if (!is_string($result)) {
+                $characters = mb_str_split($ssn);
+
+                // Filter only alphanumeric characters using an anonymous function
+                $result = implode('', array_filter($characters, function ($char) {
+                    return ctype_alnum($char);
+                }));
+            }
+        } else {
+            $result = $ssn;
         }
 
         if ($format === Format::human) {
             // add whitespace: AA DDMMYY B SS P
             foreach (array_reverse($this->humanFormat) as $format) {
-                $ssn = substr_replace($ssn, '', $format, 0);
+                $result = substr_replace($result, '', $format, 0);
             }
         }
 
-        return $ssn;
+        return $result;
     }
 
     // german ssn has a date of birth included
@@ -116,6 +127,6 @@ class Germany implements ValidatorInterface
 
     private static function convertLetter(string $letter): string
     {
-        return str_pad(ord(strtoupper($letter)) - ord('A') + 1, 2, '0', STR_PAD_LEFT);
+        return str_pad((string)(ord(strtoupper($letter)) - ord('A') + 1), 2, '0', STR_PAD_LEFT);
     }
 }
