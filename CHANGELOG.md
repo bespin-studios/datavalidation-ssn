@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/bespin-studios/datavalidation-ssn/compare/v1.0.3...v1.0.4) (2025-05-20)
+
+
+### Bug Fixes
+
+* pipeline ([f9c884e](https://github.com/bespin-studios/datavalidation-ssn/commit/f9c884ecaaf18f599575d315198c13c788ce3872))
+
 ## [1.0.3](https://github.com/bespin-studios/datavalidation-ssn/compare/v1.0.2...v1.0.3) (2024-10-01)
 
 
